@@ -1,0 +1,29 @@
+.bookmenu {
+    & button {
+        margin-top: 0em;
+        margin-bottom: 0.7em;
+        border-radius: 10em;
+        box-shadow: 1px;
+        border: none;
+        background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%); ;
+        font-size: 1.3em;
+        color: white;
+        padding: 1.5rem 3rem;
+        cursor: pointer;
+        transform: scale(1);
+        transition-duration: 1000ms;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        &:hover {
+            transform: scale(1.02);
+          /*  background: (circle, lighten(#FF79DA, 5) 0%, darken(#FF79DA, 10) 100%);*/
+            background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
+           
+
+        }
+        &:active {
+            background-color: red;
+        }
+
+    }
+}

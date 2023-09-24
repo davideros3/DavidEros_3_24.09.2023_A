@@ -1,0 +1,13 @@
+.footer {
+    background-color: #636363cc;
+    height: auto;
+    padding-top: 3em;
+    
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 2em;
+    }
+
+}

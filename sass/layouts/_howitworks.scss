@@ -1,0 +1,48 @@
+.howitworks {
+    background-color: #ffff;
+    h2{
+        display: flex;
+        justify-content: flex-start;
+        padding: 1em 2em 0;
+    }
+    &__ct{
+        padding: 1em;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        
+        :hover {
+            background-color: lighten(#9356DC, 50%);
+            &__shape__lg{
+                color: #9356DC;
+            }
+        }
+        &__shape {
+            display: inline-flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            border-style: none;
+            border-width: 1px;
+            border-color: #ddd;
+            border-radius: 2.5em;
+            width: 20em;
+            height: 3.4em;
+            background-color: #e9e7e6;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            
+            &__num{
+                background-color: #9356DC;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                color:#ddd;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+        }
+
+    }
+
+}
