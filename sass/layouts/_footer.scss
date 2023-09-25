@@ -1,13 +1,28 @@
 .footer {
     background-color: #636363cc;
     height: auto;
-    padding-top: 3em;
     
     &__info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding-top: 2em;
+        padding: 0em 3em;
+        &__logo {
+            font-family: shrikhand;
+            color: white;
+            margin: 0;
+            padding: 1.3em 0 1.3em 0;
+            letter-spacing: 2px;
+            &__text {
+                display: block;
+                margin: 0.8em 0;
+                font-size: 1em;
+                color: white;
+                &__bold {
+                    font-weight: bold;
+                }
+
+            }
+
+        }
     }
+        
 
 }
