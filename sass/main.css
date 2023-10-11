@@ -144,31 +144,16 @@ html, body {
   line-height: 0.3em;
   padding-left: 1em;
 }
-.restaurants__card__sz .fa-heart {
-  object-fit: cover;
-  width: 20px;
-  padding-right: 2em;
-}
-
-.jebat {
+.restaurants__card__sz .restaurant__card__sz__element {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.jebat i {
-  background: -webkit-linear-gradient(left, #c8689a 0%, #c8689a 50%, #f3f2f4 50%, #f3f2f4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  transition: background-position 0.3s;
-  transform: scale(1);
-  transition-duration: 1000ms;
-}
-.jebat i:hover {
-  background-position: 0 0;
-  transform: scale(1.12);
+.restaurants__card__sz .restaurant__card__sz__element .fa-heart {
+  object-fit: cover;
+  width: 20px;
+  padding-right: 2em;
 }
 
 .footer {
