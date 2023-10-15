@@ -56,29 +56,50 @@
     }
 
 
+    
+
     .fa-heart {
         object-fit: cover;
-        padding-right: 2em;
-        transition-duration: 1000ms;
+        padding-right: 1em;
+        transition-duration: 4s;
         transition-property: color;
         transition-timing-function: ease-in-out;
+        
+        
+
     }
-    .restaurant__card__sz__element__hearth_empty {
-                object-fit: cover;
-                width: 20px;
-                padding-right: 2em;
+    .restaurant__card__sz__element__hearth__empty {
+        width: 20px;
+        height: 20px;      
+        color: #e9e7e6;  
+        padding-right: 4em;
+        
     }
 
-    .restaurant__card__sz__element__hearth_full {
+    .restaurant__card__sz__element__hearth__empty::before {
+        content: "";
+    }
+
+    .restaurant__card__sz__element__hearth__full {
         position: relative;
         display: none;
+        top: -19px;
+
+        
 
 
     }
 
-    .restaurant__card__sz__element__hearth_empty:hover +.restaurant__card__sz__element__hearth_full {
+    .restaurant__card__sz__element__hearth__empty:hover +.restaurant__card__sz__element__hearth__full {
         display: block;
-        color: red
+        background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+       
+        
+
 
     }
 
@@ -86,19 +107,3 @@
 
      
 
-    // i {
- 
-    //     background: -webkit-linear-gradient(left, #c8689a 0%, #c8689a 50%, #f3f2f4 50%, #f3f2f4 100%);     
-    //     -webkit-background-clip: text;                     
-    //     -webkit-text-fill-color: transparent;
-    //     background-size: 200% 100%;
-    //     background-position: 100% 0; 
-    //     transition: background-position 0.3s;
-    //     transform: scale(1);
-    //     transition-duration: 1000ms;
-    //   }
-        
-    //   i:hover {
-    //       background-position: 0 0;
-    //       transform: scale(1.12)
-    //   };

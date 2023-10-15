@@ -30,11 +30,7 @@ html, body {
 }
 .bookmenu button:hover {
   transform: scale(1.02);
-  /*  background: (circle, lighten(#FF79DA, 5) 0%, darken(#FF79DA, 10) 100%);*/
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
-}
-.bookmenu button:active {
-  background-color: red;
 }
 
 .logo-top {
@@ -78,7 +74,7 @@ html, body {
   flex-direction: row;
 }
 .howitworks__ct :hover {
-  background-color: white;
+  background: #FFEFFF;
 }
 .howitworks__ct :hover__shape__lg {
   color: #9356DC;
@@ -153,26 +149,36 @@ html, body {
 
 .fa-heart {
   object-fit: cover;
-  padding-right: 2em;
-  transition-duration: 1000ms;
+  padding-right: 1em;
+  transition-duration: 4s;
   transition-property: color;
   transition-timing-function: ease-in-out;
 }
 
-.restaurant__card__sz__element__hearth_empty {
-  object-fit: cover;
+.restaurant__card__sz__element__hearth__empty {
   width: 20px;
-  padding-right: 2em;
+  height: 20px;
+  color: #e9e7e6;
+  padding-right: 4em;
 }
 
-.restaurant__card__sz__element__hearth_full {
+.restaurant__card__sz__element__hearth__empty::before {
+  content: "";
+}
+
+.restaurant__card__sz__element__hearth__full {
   position: relative;
   display: none;
+  top: -19px;
 }
 
-.restaurant__card__sz__element__hearth_empty:hover + .restaurant__card__sz__element__hearth_full {
+.restaurant__card__sz__element__hearth__empty:hover + .restaurant__card__sz__element__hearth__full {
   display: block;
-  color: red;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {
@@ -219,9 +225,10 @@ html, body {
   margin: 0;
 }
 .main-content__container {
-  background-color: #ededed;
+  background-color: #e9e7e6;
   margin-top: 0;
-  border-radius: 0 35px 0 0;
+  top: -30px;
+  border-radius: 35px 35px 0 0;
 }
 .main-content__container__header {
   padding: 1em 3em 1em 3em;
@@ -253,38 +260,86 @@ html, body {
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  padding: 1em 3em 1em 2em;
+  padding: 1em 1em 1em 1em;
 }
 .main-content__container__menu__item {
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: none;
-  width: 25em;
-  border-radius: 25px;
-  height: 5em;
-  line-height: 0.3em;
+  margin: 0 0px 0px 0;
+  background: white;
+  height: 70px;
+  width: 36em;
+  border-radius: 20px;
+  box-shadow: grey;
+  position: relative;
+  overflow: hidden;
+}
+.main-content__container__menu__item:hover .main-content__container__menu__item__text {
+  width: calc(90% - 5px);
+  transition: width 0.5s ease-in-out;
+}
+.main-content__container__menu__item:hover .main-content__container__menu__item__check {
+  transform: translateX(0px);
+  transition: 0.5s ease-in-out;
+}
+.main-content__container__menu__item:hover .fa-solid.fa-check {
+  transform: rotate(360deg);
+  transition: rotate 0.5s ease-in-out;
 }
 .main-content__container__menu__item h4 {
-  margin: 1.3em 0px 0.2em 1.3em;
+  margin: 10px 0px 5px 15px;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: normal;
 }
 .main-content__container__menu__item__text {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  transform-origin: left 50%;
+  transition-duration: 2s;
 }
 .main-content__container__menu__item__text p:nth-child(1) {
-  font-weight: normal;
-  font-size: 0.85rem;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 0px 0px 0px;
+  font-size: 1em;
   text-decoration: none;
-  margin-right: 0 1.3em;
-  margin-left: -18px;
+  left: -40px;
 }
 .main-content__container__menu__item__text p:nth-child(2) {
+  margin: 0;
   font-weight: bold;
+  width: 130px;
+  overflow: hidden;
   text-decoration: none;
-  font-size: 0.85rem;
-  margin-left: 4em;
+}
+.main-content__container__menu__item__check {
+  position: absolute;
+  background-color: #99E2D0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  transform-origin: right 50%;
+  border-radius: 0px 20px 20px 0px;
+  transform: translateX(65px);
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+.main-content__container__menu__item__check .fa-solid.fa-check {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  font-size: 1.5rem;
+  color: #99E2D0;
+  opacity: 1;
+  border-radius: 15px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,9 +7,10 @@
         
     }
     &__container {
-        background-color: #ededed;
+        background-color: #e9e7e6;
         margin-top: 0;
-        border-radius: 0 35px 0 0;
+        top: -30px;
+        border-radius: 35px 35px 0 0;
         &__header {
             padding: 1em 3em 1em 3em;
             display: flex;
@@ -48,58 +49,109 @@
             flex-wrap: wrap;
             flex-direction: row;
             width: 100%;
-            padding: 1em 3em 1em 2em;
+            padding: 1em 1em 1em 1em;
             
-            &__item{
-                background-color: white;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                border: none;
-                width: 25em;
-                border-radius: 25px;
-                height: 5em;
-                line-height: 0.3em;
-                
+            &__item {
+                margin: 0 0px 0px 0;
+                background: white;
+                height: 70px;
+                width: 36em;
+                border-radius: 20px;
+                box-shadow: grey;
+                position: relative;
+                overflow: hidden;
+                &:hover .main-content__container__menu__item__text{
+                    width: calc(90% - 5px);
+                    transition: width .5s ease-in-out;
+        }
+                &:hover .main-content__container__menu__item__check{
+                    transform: translateX(0px);
+                    transition: .5s ease-in-out;
+                    }
+                &:hover .fa-solid.fa-check{
+                    transform: rotate(360deg);
+                    transition: rotate .5s ease-in-out ;
+                    }
                 h4 {
-                    margin: 1.3em 0px 0.2em 1.3em;
+                    margin:10px 0px 5px 15px;
                     font-weight: bold;
-                    font-size: 1.1em;
-                }
-
+                    font-size: normal;
+                } 
+                
                 &__text {
                     display: flex;
-                    
-                    // padding-top: 1em;
-                    align-items: center;
-                    
-
-                    p:nth-child(1){
-                        
-                        font-weight: normal;
-                        font-size: 0.85rem;
-                        text-decoration: none;
-                        margin-right: 0 1.3em ;
-                        margin-left: -18px;
-
-                        
+                    justify-content: space-between;
+                    overflow: hidden;
+                    width: 100%;
+                    transform-origin: left 50%;
+                    transition-duration: 2s;
+                   
+                    p:nth-child(1) {
+                        white-space: wrap;
+                        overflow:hidden;
+                        text-overflow: ellipsis;  
+                        margin:0px 0px 0px 0px;
+                        font-size: 1em; 
+                        text-decoration: none; 
+                        left: -40px;
+                       
 
                     }
+
                     p:nth-child(2) {
-                        
+                        margin: 0;
                         font-weight: bold;
+                        
+                        width:130px;
+                        overflow: hidden;
                         text-decoration: none;
-                        font-size: 0.85rem;
-                        margin-left: 4em;
-                        
-                        
-
                     }
-
-                    
                 }
 
+                &__check {
+                    position: absolute;
+                    background-color: #99E2D0;
+                    top: 0;
+                    bottom:0;
+                    right:0;
+                    width: 65px;
+                    transform-origin: right 50%;
+                    border-radius: 0px 20px 20px 0px;
+                    transform: translateX(65px);
+                    overflow: hidden;
+                    transition-duration: .5s;
+                    .fa-solid.fa-check{
+                        position:absolute;
+                        left: 18px;
+                        top: 20px;
+                        font-size: 1.5rem;
+                        color: #99E2D0;
+                        opacity: 1;
+                        border-radius: 15px;
+                        background-color: #ffff;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+    
+                }
+            
+            
+            
+            
+            
+            
             }
-
-        }
         
-    }
-}
+        
+        
+        
+        
+        
+        
+        
+        }}
+  
