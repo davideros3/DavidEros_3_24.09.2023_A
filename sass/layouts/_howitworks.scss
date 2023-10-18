@@ -12,9 +12,9 @@
         flex-direction: row;
         
         :hover {
-            background: #FFEFFF;
+            background: $white;
             &__shape__lg{
-                color: #9356DC;
+                color: $secondaire;
             }
         }
         &__shape {
@@ -45,4 +45,16 @@
 
     }
 
+}
+
+
+@media screen and (max-width: 980px) {
+    .howitworks__ct{
+    display: block;
+    
+    }
+
+    .howitworks__ct__shape {
+        margin-top: 1em;
+    }
 }

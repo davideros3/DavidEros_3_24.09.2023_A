@@ -74,10 +74,10 @@ html, body {
   flex-direction: row;
 }
 .howitworks__ct :hover {
-  background: #FFEFFF;
+  background: white;
 }
 .howitworks__ct :hover__shape__lg {
-  color: #9356DC;
+  color: #FF79DA;
 }
 .howitworks__ct__shape {
   display: inline-flex;
@@ -104,6 +104,14 @@ html, body {
   display: flex;
 }
 
+@media screen and (max-width: 980px) {
+  .howitworks__ct {
+    display: block;
+  }
+  .howitworks__ct__shape {
+    margin-top: 1em;
+  }
+}
 .restaurants {
   margin-top: 3em;
   background-color: #ededed;
@@ -147,40 +155,60 @@ html, body {
   align-items: center;
 }
 
-.fa-heart {
-  object-fit: cover;
-  padding-right: 1em;
-  transition-duration: 4s;
-  transition-property: color;
-  transition-timing-function: ease-in-out;
+.restaurant__card__sz__element__hearth .fa-regular.fa-heart {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
 }
-
-.restaurant__card__sz__element__hearth__empty {
-  width: 20px;
-  height: 20px;
-  color: #e9e7e6;
-  padding-right: 4em;
+.restaurant__card__sz__element__hearth .fa-regular.fa-heart {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 25px;
+  opacity: 1;
+  right: 25px;
 }
-
-.restaurant__card__sz__element__hearth__empty::before {
-  content: "";
-}
-
-.restaurant__card__sz__element__hearth__full {
-  position: relative;
-  display: none;
-  top: -19px;
-}
-
-.restaurant__card__sz__element__hearth__empty:hover + .restaurant__card__sz__element__hearth__full {
-  display: block;
+.restaurant__card__sz__element__hearth .fa-solid.fa-heart {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: scale(1);
+}
+.restaurant__card__sz__element__hearth .fa-solid.fa-heart:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  transform: scale 2;
 }
 
+.restaurant__card__sz__element__new {
+  position: relative;
+  bottom: 21.5em;
+  width: 7em;
+  background-color: #99E2D0;
+  height: 2em;
+  right: 3em;
+}
+.restaurant__card__sz__element__new p {
+  position: relative;
+  left: 1.4em;
+  bottom: 0.1em;
+  color: #278971;
+}
+.restaurant__card__sz__element__new:hover {
+  background-color: #278971;
+}
+.restaurant__card__sz__element__new:hover p {
+  color: #99E2D0;
+}
+
+@media screen and (max-width: 980px) {
+  .restaurant__card__sz__element {
+    display: block;
+  }
+}
 .footer {
   background-color: rgba(99, 99, 99, 0.8);
   height: auto;
@@ -218,42 +246,57 @@ html, body {
   margin-right: auto;
 }
 
-.main-content img {
-  width: 100%;
+.headerpic {
+  overflow: hidden;
   height: 26em;
+}
+.headerpic img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  margin: 0;
 }
-.main-content__container {
+
+.main {
+  position: relative;
   background-color: #e9e7e6;
-  margin-top: 0;
-  top: -30px;
-  border-radius: 35px 35px 0 0;
+  border-radius: 2.8em 2.8em 0 0;
+  margin-top: -3em;
+  padding-bottom: 10px;
 }
-.main-content__container__header {
-  padding: 1em 3em 1em 3em;
-  display: flex;
-  align-items: center;
-  gap: 3em;
-  margin: auto;
+.main__content {
+  margin: 0em 1em;
 }
-.main-content__container__header h2 {
+.main__content__title {
   font-family: Shrikhand;
+  padding: 1.2em 0 0 1em;
+  font-size: 1.6em;
 }
-.main-content__container__header .fa-heart {
-  margin-left: auto;
-  fill: red;
-  color: red;
+.main__content__hearth .fa-regular.fa-heart {
+  opacity: 0;
+  transition: 1s ease-in-out;
 }
-.main-content__container p {
-  color: black;
-  padding: 0em 3em 0em 3em;
-  text-decoration-line: underline;
-  text-decoration-color: #99E2D0;
-  text-decoration-style: solid;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 3px;
+.main__content__hearth .fa-solid.fa-heart:hover {
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
+.main__content__hearth .fa-regular.fa-heart {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.5em;
+  top: 30px;
+  opacity: 1;
+}
+.main__content__hearth .fa-solid.fa-heart {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 36px;
+  top: 30px;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
 .main-content__container__menu {
   display: flex;
   justify-content: space-around;
@@ -265,7 +308,7 @@ html, body {
 .main-content__container__menu__item {
   background: white;
   height: 70px;
-  width: 30em;
+  width: 30.5em;
   border-radius: 20px;
   box-shadow: grey;
   position: relative;
@@ -303,7 +346,7 @@ html, body {
   margin: 0px 0px 0px 0px;
   font-size: 1em;
   text-decoration: none;
-  left: -40px;
+  padding-left: 0.9em;
 }
 .main-content__container__menu__item__text p:nth-child(2) {
   margin: 0;
@@ -339,6 +382,70 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.under-line::after {
+  padding: 0em 1em 0em 1em;
+  content: "";
+  display: block;
+  width: 8px;
+  padding-top: 3px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.main-content__container__menu > :nth-of-type(1) {
+  animation: SlideDown 0.2s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(2) {
+  animation: SlideDown 0.4s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(3) {
+  animation: SlideDown 0.6s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(4) {
+  animation: SlideDown 0.8s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(5) {
+  animation: SlideDown 1s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(6) {
+  animation: SlideDown 1.2s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(7) {
+  animation: SlideDown 1.4s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(8) {
+  animation: SlideDown 1.6s ease-in-out;
+}
+
+.main-content__container__menu > :nth-of-type(9) {
+  animation: SlideDown 1.6s ease-in-out;
+}
+
+@keyframes SlideDown {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1066px) {
+  .main-content__container__menu {
+    display: block;
+  }
+  .main-content__container__menu__item {
+    margin-top: 1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

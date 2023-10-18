@@ -58,52 +58,126 @@
 
     
 
-    .fa-heart {
-        object-fit: cover;
-        padding-right: 1em;
-        transition-duration: 4s;
-        transition-property: color;
-        transition-timing-function: ease-in-out;
+    // .fa-heart {
+    //     object-fit: cover;
+    //     padding-right: 1em;
+    //     transition-duration: 4s;
+    //     transition-property: color;
+    //     transition-timing-function: ease-in-out;
         
         
 
-    }
-    .restaurant__card__sz__element__hearth__empty {
-        width: 20px;
-        height: 20px;      
-        color: #e9e7e6;  
-        padding-right: 4em;
+    // }
+    // .restaurant__card__sz__element__hearth__empty {
+    //     width: 20px;
+    //     height: 20px;      
+    //     color: #e9e7e6;  
+    //     padding-right: 4em;
         
-    }
+    // }
 
-    .restaurant__card__sz__element__hearth__empty::before {
-        content: "";
-    }
+    // .restaurant__card__sz__element__hearth__empty::before {
+    //     content: "";
+    // }
 
-    .restaurant__card__sz__element__hearth__full {
-        position: relative;
-        display: none;
-        top: -19px;
+    // .restaurant__card__sz__element__hearth__full {
+    //     position: relative;
+    //     display: none;
+    //     top: -19px;
 
         
 
 
-    }
+    // }
 
-    .restaurant__card__sz__element__hearth__empty:hover +.restaurant__card__sz__element__hearth__full {
-        display: block;
-        background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+    // .restaurant__card__sz__element__hearth__empty:hover +.restaurant__card__sz__element__hearth__full {
+    //     display: block;
+    //     background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
+    //     -webkit-background-clip: text;
+    //     -moz-background-clip: text;
+    //     background-clip: text;
+    //     -webkit-text-fill-color: transparent;
        
         
 
 
+    // }
+
+ .restaurant__card__sz__element__hearth {
+    
+    
+    .fa-regular.fa-heart {
+        opacity: 0;
+        transition: 0.5s ease-in-out
+
     }
 
- 
+     
+    .fa-regular.fa-heart {
+        font-size: 2rem;
+        position:absolute;
+        bottom: 25px;
+        opacity: 1;
+        right: 25px;
+    }
+
+    .fa-solid.fa-heart {
+        font-size: 2rem;
+        position:absolute;
+        bottom: 25px;
+        right: 25px;
+        background: $linear-violet;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+       
+        transform: scale(1)
+    }
+
+    .fa-solid.fa-heart:hover {
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+        transform: scale (2)
+
+
+    }
+}
+
+.restaurant__card__sz__element__new {
+    position: relative;
+    bottom: 21.5em;
+    width: 7em;
+    background-color: $color-tertiary;
+    height: 2em;
+    right: 3em;
+    
+    p {
+        position: relative;
+        left: 1.4em;
+        bottom:0.1em;
+        color: $color-tertiary-dark;
+
+        
+    }
+
+    &:hover {
+        background-color: $color-tertiary-dark;
+        p{
+            color: $color-tertiary
+
+        }
+    }
+
+   
+}
+
+@media screen and (max-width: 980px ) {
+    .restaurant__card__sz__element {
+        display: block;
+
+    }
+    
+}
 
      
 
