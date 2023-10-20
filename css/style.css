@@ -16,7 +16,6 @@ html, body {
   margin-top: 0em;
   margin-bottom: 0.7em;
   border-radius: 10em;
-  box-shadow: 1px;
   border: none;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   font-size: 1.3em;
@@ -310,7 +309,6 @@ html, body {
   height: 70px;
   width: 30em;
   border-radius: 20px;
-  box-shadow: grey;
   position: relative;
   overflow: hidden;
 }
@@ -325,7 +323,7 @@ html, body {
 .main-content__container__menu__item h4 {
   margin: 10px 0px 5px 15px;
   font-weight: bold;
-  font-size: normal;
+  
 }
 .main-content__container__menu__item__text {
   display: flex;
@@ -336,7 +334,7 @@ html, body {
   transition-duration: 2s;
 }
 .main-content__container__menu__item__text p:nth-child(1) {
-  white-space: wrap;
+  
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0px 0px 0px 0px;
