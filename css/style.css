@@ -313,7 +313,7 @@ html, body {
 }
 .main-content__container__menu__item {
   background: white;
-  height: 70px;
+  height: 75px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -369,7 +369,7 @@ html, body {
 .main-content__container__menu__item__check .fa-solid.fa-check {
   position: absolute;
   left: 18px;
-  top: 20px;
+  top: 23px;
   font-size: 1.5rem;
   color: #99E2D0;
   opacity: 1;
