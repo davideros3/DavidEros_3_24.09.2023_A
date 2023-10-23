@@ -1,0 +1,71 @@
+.spinner{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    opacity:1;
+    animation: showing;
+    animation-duration: 0s;
+    animation-delay:2s;
+    animation-fill-mode: forwards;
+    }
+
+
+.spinner__element{
+    border: 16px solid $white;
+    border-radius: 50%;
+    border-top: 16px solid $secondaire;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    left:0;
+    animation-name:rotating;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+      visibility:visible;
+    }
+    100%{
+      transform: rotate(360deg);
+      visibility:visible;
+    }
+    
+
+  
+}
+
+@keyframes showing {
+  from{
+    opacity:1;
+    display: block;
+  }
+  to{
+    opacity:0;
+    z-index:-10;
+    display:none;
+   
+    
+    
+  }
+   }
+
+
+.body {
+  animation-duration: 4s;
+}

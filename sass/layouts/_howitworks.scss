@@ -50,8 +50,10 @@
 
 @media screen and (max-width: 980px) {
     .howitworks__ct{
-    display: block;
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     }
 
     .howitworks__ct__shape {
