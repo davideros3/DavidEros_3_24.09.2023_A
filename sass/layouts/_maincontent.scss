@@ -92,7 +92,7 @@
         h4 {
             margin:10px 0px 5px 15px;
             font-weight: bold;
-            font-size: normal;
+            
         } 
         
         &__text {
@@ -104,7 +104,7 @@
             transition-duration: 2s;
            
             p:nth-child(1) {
-                white-space: wrap;
+                
                 overflow:hidden;
                 text-overflow: ellipsis;  
                 margin:0px 0px 0px 0px;
@@ -240,7 +240,7 @@
     margin: 0 auto;
     display: grid;
     padding: 1em 1em 1em 1em;
-    grid-template-columns: repeat(auto-fit, minmax(29.5em,2, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(29em, 2, 1fr));
     gap: 0.5em;
 
    
