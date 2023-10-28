@@ -2,21 +2,26 @@
     background-color: #636363cc;
     height: auto;
     
+    
     &__info {
-        padding: 0em 3em;
+        padding: 1em 3em;
         &__logo {
             font-family: shrikhand;
             color: white;
             margin: 0;
             padding: 1.3em 0 1.3em 0;
             letter-spacing: 2px;
+            
             &__text {
                 display: block;
                 margin: 0.8em 0;
                 font-size: 1em;
                 color: white;
+                text-decoration: none;
+                
                 &__bold {
                     font-weight: bold;
+                    
                 }
 
             }

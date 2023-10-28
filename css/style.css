@@ -220,7 +220,7 @@ html, body {
   height: auto;
 }
 .footer__info {
-  padding: 0em 3em;
+  padding: 1em 3em;
 }
 .footer__info__logo {
   font-family: shrikhand;
@@ -234,6 +234,7 @@ html, body {
   margin: 0.8em 0;
   font-size: 1em;
   color: white;
+  text-decoration: none;
 }
 .footer__info__logo__text__bold {
   font-weight: bold;
