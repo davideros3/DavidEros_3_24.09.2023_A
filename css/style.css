@@ -385,7 +385,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 0.5s ease-in-out;
+  
 }
 
 .under-line::after {
